@@ -1,0 +1,67 @@
+<h1 style="text-align:center">Angular Pipes</h1>
+<h2 style="text-align:center">Adding the parameters</h2>
+<div style="text-align:center"> 
+  Today's date :- {{presentDate}} 
+</div>
+<hr>
+<h2 style="text-align:center">Date Pipes</h2>
+<div style="text-align:center"> 
+  Today's date :- {{presentDate | date }}
+</div>
+<div style="text-align:center">
+  Short date :- {{presentDate | date:'shortDate'}}<br/>
+  Full date :- {{presentDate | date:'fullDate'}}<br/>
+  Formatted date :- {{presentDate | date:'M/dd/yyyy'}}<br/>
+  Hours and minutes :- {{presentDate | date:'h:mm'}}<br/>
+</div>
+<hr>
+<h2 style="text-align:center">Text Format pipes</h2>
+<div style="text-align:center">
+  Date with uppercase :- {{presentDate | date:'fullDate' | uppercase}} <br/>
+  Date with lowercase :- {{presentDate | date:'medium' | lowercase}} <br/>
+</div>
+<hr>
+
+<h1 style="text-align:center">Built-in Pipes</h1>
+<h2 style="text-align:center">Async Pipe</h2>
+<div style="text-align:center">
+  Seconds changing in Time: {{ time$ | async | date:'mediumTime'}}
+</div>
+<hr>
+<h2 style="text-align:center">Currency Pipe</h2>
+<p style="text-align:center">{{ price | currency:'':true}}</p>
+<p style="text-align:center">{{ price | currency:'INR'}}</p>
+<p style="text-align:center">{{ price | currency:'CAD'}}</p>
+
+<hr>
+<h2 style="text-align:center">Slice Pipe</h2>
+<div style="text-align:center">
+  <h3>Start index:- {{Fruits | slice:2}}</h3>
+  <h4>Start and end index:- {{Fruits | slice:1:4}}</h4>
+  <h5>Negative index:- {{Fruits | slice:-2}}</h5>
+  <h6>Negative start and end index:- {{Fruits | slice:-4:-2}}</h6>
+</div>
+<hr>
+<h2 style="text-align:center">Decimal Pipe</h2>
+<div style="text-align:center">
+  <p> Apply formatting 1:- {{decimalNum1 | number:'3.1'}}</p>
+  <p> Apply formatting 2:- {{decimalNum2 | number:'2.1-4'}}
+  <p> Apply formatting 3:- {{decimalNum3 | number:'2.1'}}</p>
+</div>
+<hr>
+<h2 style="text-align:center">JSON Pipes</h2>
+<div style="text-align:center">
+  <p>Without JSON pipe:</p>
+  <pre>{{ object }}</pre>
+  <p>With JSON pipe:</p>
+  <pre>{{ object | json }}</pre>
+</div>
+<hr>
+<h2 style="text-align:center">Percent Pipes</h2>
+<div style="text-align:center">
+  <p>A: {{ a | percent }}</p>
+
+  <p>B: {{ b | percent: '4.3-5' }}</p>
+
+  <p>B: {{ b | percent: '4.3-5' : 'fr' }}</p>
+</div>
